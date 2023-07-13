@@ -1,0 +1,361 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="content-heading">{{ 'subscription_page_create_subscription' | translate}}</h1>
+      </div>
+      <div class="col-lg-4 text-right">
+          <a routerLink="../memberDashboard" class="theme-active-btn top-btn">{{ 'view_dashboard' | translate}}</a>
+      </div>
+    </div>
+    <div class="white-bg">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="white-bg-subHeading">{{ 'basic_information' | translate}}</div>
+          </div>
+        </div>
+        <form  #subForm="ngForm"  class="row create-form">
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="companyName">{{ 'company_name' | translate}}</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="{{ 'placeholder_text' | translate}}"
+                name="companyName"
+                ngModelF
+                disabled
+              />
+              <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="CompanyRepresentativeName"
+                >{{ 'company_name_represntaive' | translate}}</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="{{ 'placeholder_text' | translate}}"
+                name="representativeName"
+                ndModel
+                disabled
+              />
+              <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="companyEmail">{{ 'company_email' | translate}}</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="{{ 'placeholder_text' | translate}}"
+                name="companyEmail"
+                ngModel
+                disabled
+              />
+              <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="companyContactNumber">{{ 'company_contact_number' | translate}}</label>
+              <div class="flex-input">
+                <input type="number" class="form-control" placeholder="Number 1" ngModel disabled name="contactNumber1" />
+                <input type="number" class="form-control" placeholder="Number 2" ngModel disabled name="contactNumber2" />
+                <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="CompanyCountry">{{ 'company_country_select' | translate}}</label>
+              <select name="CompanyCountry" id="" class="form-control hide-dropdown" disabled ngModel>
+                <option value="" selected disabled>
+                  {{ 'please_select' | translate}}
+                </option>
+                <option value="1">{{'uae'|translate}}</option>
+                <option value="2">{{'saudia'|translate}}</option>
+                <option value="3">{{'qatar'|translate}}</option>
+                <option value="4">{{'oman'|translate}}</option>
+                <option value="5">{{'yemen'|translate}}</option>
+              </select>
+			  <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="CompanyCity">{{ 'company_city_select' | translate}}</label>
+              <select name="companyCity hide-dropdown" id="" class="form-control" disabled ngModel>
+                <option value="" selected disabled>{{ 'please_select' | translate}}</option>
+                <option value="1">{{'dubai'|translate}}</option>
+                <option value="2">{{'riyadh'|translate}}</option>
+                <option value="3">{{'abu_dhabi'|translate}}</option>
+                <option value="4">{{'sharjah'|translate}}</option>
+              </select>
+			  <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="CompanyType">{{ 'company_type' | translate}}</label>
+              <select name="companyType hide-dropdown" disabled id="" class="form-control" ngModel>
+                <option value="" selected disabled>{{ 'please_select' | translate}}</option>
+                <option value="1">{{'mechanical'|translate}}</option>
+                <option value="2">{{'installation'|translate}}</option>
+                <option value="3">{{'electrical'|translate}}</option>
+              </select>
+			  <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="AccountType">{{ 'account_type' | translate}}</label>
+              <select name="accountType hide-dropdown" disabled ngModel id="" class="form-control">
+                <option value="" selected disabled>{{ 'please_select' | translate}}</option>
+                <option value="1">{{'new'|translate}}</option>
+                <option value="2">{{'pending'|translate}}</option>
+                <option value="3">{{'old'|translate}}</option>
+              </select>
+			  <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+            </div>
+            <div class="col-lg-12">
+              <div class="white-bg-subHeading">{{ 'user_information' | translate}}</div>
+            </div>
+            <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+             <label for="NumberofClients">{{ 'no_of_clients' | translate}}</label>
+             <input
+             type="number"
+             class="form-control"
+             placeholder="{{ 'placeholder_text' | translate}}"
+             name="NumberofClient"
+             ngModel
+			 disabled
+           />
+		   <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+          </div>
+          <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <label for="noMT">{{ 'no_of_maintenance_manager' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="ManagerMaintenanceNumer"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="noMT">{{ 'no_of_maintenance_technicians' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="MaintenanceTechNo"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="RepairTech">{{ 'no_of_maintenance_repair_technicians' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="MaintenanceRepairTechNo"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="noInstallationManager">{{'no_of_installation_manager' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="InstallationManagersNo"
+              ngModel
+			  disabled
+              />
+			  <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="noInstallationTech">{{ 'no_of_installlation_technicians' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="InstallationTechNo"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="DashboardUser">{{ 'no_of_dashboard_users' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="DashboardClientNo"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="noCityAllowed">{{ 'no_of_cities_allowed' | translate}}</label>
+              <input
+              type="number"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="AllowedCitiesNo"
+              ngModel
+			  disabled
+              />
+			  <img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="col-lg-12">
+              <div class="white-bg-subHeading">{{'no_of_trail_day_details' | translate}}</div>
+            </div>
+            <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="noOfTrailDay">{{ 'no_of_trail_days' | translate}}</label>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="TrialPeriod"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="trialStartDate">{{'trails_start_date' | translate}}</label>
+              <input
+              type="date"
+              class="form-control"
+              value=""
+              name="TrialStartDate"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="trialStartDate">{{ 'trails_end_date' | translate}}</label>
+              <input
+              type="date"
+              class="form-control"
+              value=""
+              disabled
+              name="TrialEndDate"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="col-lg-12">
+              <div class="white-bg-subHeading">{{ 'subscription_detail' | translate}}</div>
+            </div>
+            <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="noOfSubYear">{{ 'no_of_subscription_years' | translate}}</label>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="SubscriptionYears"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="subStartDate">{{ 'subscription_start_date' | translate}}</label>
+              <input
+              type="date"
+              class="form-control"
+              value=""
+              name="SubscriptionStartDate"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="subEndtDate">{{ 'subscription_end_date' | translate}}</label>
+              <input
+              type="date"
+              class="form-control"
+              value=""
+              name="SubscriptionEndDate"
+              ngModel
+              disabled
+            />
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="AddDate">{{ 'additional_free' | translate}}</label>
+              <input
+              type="date"
+              class="form-control"
+              value=""
+              name="FreeContractDate"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="SubPrice">{{ 'subscription_price' | translate}}</label>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="SubscriptionPrice"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="col-lg-12">
+              <div class="white-bg-subHeading"> {{ 'bank_details' | translate}} </div>
+            </div>
+            <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="BankName">{{ 'bank_name' | translate}} </label>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="BankName"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="IBANnumber">{{ 'iban_number' | translate}}</label>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="IBANNumber"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="form-group col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <label for="BankCity">{{ 'bank_city_name' | translate}}</label>
+              <input
+              type="text"
+              class="form-control"
+              placeholder="{{ 'placeholder_text' | translate}}"
+              name="BankCity"
+              ngModel
+			  disabled
+            />
+			<img src="../../../../assets/images/edit.svg" class="edit-icon" alt="">
+           </div>
+           <div class="col-lg-12 text-right">
+               <app-update-btn></app-update-btn>
+               <!-- <app-save-btn></app-save-btn> -->
+               <app-cancel-btn></app-cancel-btn>
+           </div>
+          </form>
+		  <div class="back-toHome">
+				<a href="" routerLink="../"><i class="fas fa-angle-left"></i> {{ 'back_page' | translate}}</a>
+		  </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

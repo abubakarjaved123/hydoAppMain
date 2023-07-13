@@ -1,0 +1,61 @@
+<aside class="aside">
+    <img src="./../../../assets/images/bg-sidebar.png" class="sidebar-bg" alt="">
+    <div class="logo-div">
+        <img src="./../../../assets/images/logo.png" alt="">
+    </div>
+
+    <!--  ul mennu -->
+    <ul class="main-menu">
+        <!-- <li class="active">
+           <a href="#">
+                <span class="image-icon-active"><img src="../../../assets/images/sidebarIcons/home-active.png" class="menu-icon" alt=""></span>
+                <span class="image-icon-nactive "><img src="../../../assets/images/sidebarIcons/home.png" class="menu-icon" alt=""></span>
+                <span class="menu-text">Home</span>
+           </a>
+        </li> -->
+        <app-homeli activeLink="/" text='{{"aside_home" | translate }}' activeImage="../../../assets/images/sidebarIcons/home-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/home.png"></app-homeli>
+
+        <app-sidemenuli activeLink="subscription" text='{{"aside_subscription" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/sub-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/sub.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="members" text='{{"aside_members" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/member-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/member.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="ticketing" text='{{"aside_tsystem" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/ticket-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/ticket.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="bill" text='{{"aside_sbill" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/bill-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/bill.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="clientPayment" text='{{"aside_clientPayment" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/payment-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/payment.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="management" text='{{"aside_uManagement" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/management-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/management.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="reports" text='{{"aside_reports" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/report-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/report.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="notification" text='{{"aside_notification" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/notification-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/notification.png"></app-sidemenuli>
+
+        <app-sidemenuli activeLink="setting" text='{{"aside_setting" | translate }}' className=""
+            activeImage="../../../assets/images/sidebarIcons/setting-active.png"
+            nActiveImage="../../../assets/images/sidebarIcons/setting.png"></app-sidemenuli>
+    </ul>
+    <div class="logout-link">
+        <a href="#">
+            <span class="logout-icon"><img src="../../../assets/images/sidebarIcons/logout.png" alt=""></span>
+            <span class="logout-text"  (click)="logout()">{{"aside_ougout" | translate }}</span>
+        </a>
+    </div>
+</aside>

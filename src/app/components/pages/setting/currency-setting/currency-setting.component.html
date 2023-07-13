@@ -1,0 +1,46 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row custom-form-group">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'setting' | translate}}</h1>
+      </div>
+    </div>
+	<div class="row">
+		<app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting" aclass="" innertext="{{ 'language_setting' | translate}}"> </app-setting-cards>
+        <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting/accountSetting" aclass="" innertext="{{ 'account_setting' | translate}}"></app-setting-cards>
+        <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting/currencySetting" aclass="active" innertext="{{ 'currency_setting' | translate}}"></app-setting-cards>
+        <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting/subSetting" aclass="" innertext="{{ 'subscription_setting' | translate}}"></app-setting-cards>
+    </div>
+
+    <div class="white-bg mb-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="white-bg-subHeading">{{ 'currency_setting' | translate}}</div>
+          </div>
+          <div class="col-lg-4">
+    
+          </div>
+        </div>
+        <div class="row my-4 mx-1 mb-5 create-form">
+            <div class="form-group col-lg-6">
+                <label for="name">{{ 'currency' | translate}}</label>
+                <select name="" class="form-control" id="">
+                    <option value="" selected disabled>{{ 'please_select' | translate}}</option>
+                    <option value="">{{'currency_euro'|translate}}</option>
+                    <option value="">{{'currency_dollars'|translate}}</option>
+                    <option value="">{{'currency_riyals'|translate}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-lg-12 text-right">
+                <app-cancel-btn></app-cancel-btn>
+                <app-reset-btn></app-reset-btn>
+                <app-update-btn></app-update-btn>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
+
+	<app-footer></app-footer>

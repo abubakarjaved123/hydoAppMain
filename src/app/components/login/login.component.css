@@ -1,0 +1,26 @@
+.loginBody{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #194E78;
+    width: 100%;
+    margin-left: -220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+
+.loginBox{
+    width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.login--heading{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}

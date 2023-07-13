@@ -1,0 +1,38 @@
+.topbar{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 3px 4px 0px #d3d3d38f;;
+}
+span.icon{
+  padding: 7px 14px;
+  display: inherit;
+  background-color: #F5F5F5;
+  cursor: pointer;
+
+}
+span.icon i{
+  transition: all 0.2s;
+  position: relative;
+  left: 0;
+}
+
+span.icon:hover i{
+  left: -3px;
+}
+.select__language{
+  border: none;
+  position: relative;
+  top: 7px;
+  margin: 0 10px;
+}
+.select__language:focus-visible{
+  border: none;
+  outline: none;
+}
+div[dir="rtl"] .content {
+    margin-left: 0;
+    margin-right: 220px;
+  }
+
+

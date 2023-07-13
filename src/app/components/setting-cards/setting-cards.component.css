@@ -1,0 +1,41 @@
+
+.innerBox-settingCard{
+	background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 4px 0px #e9e7e7;
+	text-align: center;
+	margin-top: 30px;
+	transition: all 0.3s;
+    padding: 30px 0;
+}
+.innerBox-settingCard h2{
+	color: var(--theme-blue);
+    font-size: 20px;
+}
+.innerBox-settingCard p{
+	padding-bottom: 0px;
+	margin-bottom: 0px !Important;
+	color: gray;
+}
+.active .innerBox-settingCard{
+    background-color: var(--theme-blue);
+  
+}
+.active  .innerBox-settingCard h2{
+    color: white;
+}
+.innerBox-settingCard:hover h2{
+    color: white;
+}
+.active .innerBox-settingCard  p{
+    color: white;
+}
+.innerBox-settingCard:hover p{
+    color: white;
+}
+.innerBox-settingCard:hover{
+    background-color: var(--theme-blue);
+   
+}

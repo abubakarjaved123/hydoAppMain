@@ -1,0 +1,40 @@
+
+.innerBox-reportCard{
+	background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 4px 0px #e9e7e7;
+	text-align: center;
+	margin-top: 10px;
+	transition: all 0.3s;
+    min-height: 126px;
+}
+.innerBox-reportCard h1{
+	color: var(--theme-blue)
+}
+.innerBox-reportCard p{
+	padding-bottom: 0px;
+	margin-bottom: 0px !Important;
+	color: gray;
+}
+.active .innerBox-reportCard{
+    background-color: var(--theme-blue);
+  
+}
+.active  .innerBox-reportCard h1{
+    color: white;
+}
+.innerBox-reportCard:hover h1{
+    color: white;
+}
+.active .innerBox-reportCard  p{
+    color: white;
+}
+.innerBox-reportCard:hover p{
+    color: white;
+}
+.innerBox-reportCard:hover{
+    background-color: var(--theme-blue);
+   
+}

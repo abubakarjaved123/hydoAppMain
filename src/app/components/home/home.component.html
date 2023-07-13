@@ -1,0 +1,18 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{'home_page_heading' | translate}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div *ngFor="let user of  data.users">
+      
+      </div> -->
+
+       <app-home-card class="col-lg-4" link="#" text="{{'home_page_number_of_client_subscribed' | translate}}" image="../assets/images/homeIcons/clients.png" count={{companyCountNumber}}></app-home-card>
+       <app-home-card class="col-lg-4" link="#" text="{{'home_page_number_of_new_tickets' | translate}}" image="../assets/images/homeIcons/ticket.png" count={{ticketCountNumber}}></app-home-card>
+       <app-home-card class="col-lg-4" link="#" text="{{'home_page_number_of_new_paid_bill_request' | translate}}" image="../assets/images/homeIcons/bill.png" count="38"></app-home-card>
+       <app-home-card class="col-lg-4" link="#" text="{{'home_page_number_of_unpaid_subscription' | translate}}" image="../assets/images/homeIcons/unpaid.png"  count={{paymentCountNumber}}></app-home-card>
+       <app-home-card class="col-lg-4" link="#" text="{{'home_page_number_of_credit_card_income_transfer_request' | translate}}" image="../assets/images/homeIcons/credit-card.png" count="89"></app-home-card> 
+     </div>
+   </div>

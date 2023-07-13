@@ -1,0 +1,146 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{"client_wallet" | translate}}</h1>
+      </div>
+    </div>
+
+    
+    <div class="white-bg">
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="white-bg-subHeading">{{"client_income_data" | translate}}</div>
+            </div>
+          </div>
+       <div class="row">
+           <div class="col-lg-8">
+               <div class="row">
+                   <app-client-dashboard-card class="col-lg-6" text="{{'client_total_credit_card_payment_bills_income' | translate}}" figure="525,775"></app-client-dashboard-card>
+                   <app-client-dashboard-card class="col-lg-6" text="{{ 'client_total_bank_transfer_payment_bill_income' | translate}}" figure="654,124"></app-client-dashboard-card>
+                   <app-client-dashboard-card class="col-lg-6" text="{{ 'client_total_cash_payment_bills_income' | translate}}" figure="157,546"></app-client-dashboard-card>
+                   <app-client-dashboard-card class="col-lg-6" text="{{'client_total_pos_payment_bills_income' | translate}}" figure="452,321"></app-client-dashboard-card>
+               </div>
+           </div>
+           <div class="col-lg-4">
+               <img src="../../../../../assets/images/Group 2802.svg" class="img-fluid circle-img" alt="">
+           </div>
+       </div>
+          
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="white-bg-subHeading">{{ 'client_credit_card_bills' | translate}}</div>
+                    </div>
+                  </div>
+                  <div class="row my-6 mx-1">
+                      <table class="table theme-table table-bordered" *ngIf="CCList">
+                          <thead>
+                              <tr>
+                                  <th>{{ 'card_number' | translate}}</th>
+                                  <th>{{ 'payment' | translate}}</th>
+                              </tr>
+                          </thead>
+                          <tbody *ngFor="let cc of CCList">
+                              <tr>
+                                  <td><a href="" routerLink="memberViewPage"> {{cc.CardNumber}}</a></td>
+                                  <td>{{cc.Payment}}</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+            </div>
+            <div class="col-lg-3">
+                <img src="../../../../../assets//images/Group 2805.svg" class="img-fluid circle-img" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="../../../../../assets//images/Group 2804.svg" class="img-fluid circle-img" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="ScheduledTransferDate">{{ 'scheduled_transfer_date' | translate}}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="12-12-2022"
+                  name="ScheduledTransferDate"
+                  ngModelF
+                  disabled
+                />
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="BankName">{{ 'bank_name' | translate}}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="United Bank UAE"
+                  name="BankName"
+                  ngModelF
+                  disabled
+                />
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="IBANnumber">{{ 'iban_number' | translate}}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="6465486513213"
+                  name="IBANnumber"
+                  ngModelF
+                  disabled
+                />
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="Subscriptionprice">{{ 'subscription_price' | translate}}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="2430 Riyals"
+                  name="Subscriptionprice"
+                  ngModelF
+                  disabled
+                />
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="BillInformation">{{ 'bill_request_information' | translate}}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  name="BillInformation"
+                  ngModelF
+                  disabled
+                />
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+              <div class="white-bg-subHeading">{{ 'client_credit_card_bills' | translate}}</div>
+            </div>
+          </div>
+          <div class="row my-4 mx-1">
+              <table class="table theme-table table-bordered" *ngIf="CCCList">
+                  <thead>
+                      <tr>
+                          <th>{{ 'card_number' | translate}}</th>
+                          <th>{{ 'payment' | translate}}t</th>
+                          <th>{{ 'status' | translate}}</th>
+                      </tr>
+                  </thead>
+                  <tbody *ngFor="let ccc of CCCList">
+                      <tr>
+                          <td><span class="theme-color">{{ccc.CardNumber}}</span></td>
+                          <td>{{ccc.Payment}}</td>
+                          <td>{{ccc.Status === 1 ? 'Paid' : 'Unpaid'}}</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          <div class="back-toHome">
+            <a href="" routerLink="../"><i class="fas fa-angle-left"></i> {{'back_page' | translate}}</a>
+      </div>
+    </div>
+    </div>
+
+    <app-footer></app-footer>

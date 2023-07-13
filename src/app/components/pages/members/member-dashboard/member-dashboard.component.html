@@ -1,0 +1,28 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row custom-form-group">
+      <div class="col-lg-8">
+        <h1 class="content-heading">{{ 'member_dashboard' | translate}}</h1>
+      </div>
+      <div class="col-lg-4">
+          <div class="form-group">
+                <input type="date" class="form-control" placeholder="Filter by Subscription Date">
+                <span class="special_icon"><img src="./../../../../assets/images/3586371_calendar_date_schedule_icon.svg" alt=""></span>
+            </div>
+      </div>
+    </div>
+	<div class="row">
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="253" text="{{ 'total_client' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="03" text="{{ 'today_maintenance' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="27" text="{{ 'monthly_maintenance' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="31" text="{{ 'total_companies' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="22" text="{{ 'solved_complains' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="45" text="{{ 'total_installation' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="05" text="{{ 'new_installation' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="178" text="{{ 'completed_visit' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="05" text="{{ 'paid_bills' | translate}}s"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="37578" text="{{ 'total_income' | translate}}"> </app-client-dashboard-card>
+		<app-client-dashboard-card class="col-lg-3 col-md-4 col-sm-6" figure="22145" text="{{ 'monthly_income' | translate}}"> </app-client-dashboard-card>
+	
+	</div>
+
+	<app-footer></app-footer>

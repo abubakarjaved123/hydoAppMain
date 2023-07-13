@@ -1,0 +1,99 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'subscription_bill' | translate }}</h1>
+      </div>
+    </div>
+    <div class="white-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="white-bg-subHeading">{{ 'subscription_bill' | translate }}</div>
+        </div>
+      </div>
+      <form  #subForm="ngForm" (ngSubmit)="getValues(subForm.value)" class="row create-form">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="CompanyName">{{ 'company_name' | translate}}</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder=" {{ 'placeholder_text' | translate}} "
+            name="TicketTitle"
+            ngModelF
+            disabled
+          />
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+            <label for="subexpirtyDate">{{ 'expiry_date' | translate}}</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder=" {{ 'placeholder_text' | translate}} "
+              name="subexpirtyDate"
+              ngModelF
+              disabled
+            />
+          </div>
+          <div class="form-group col-lg-6 col-md-6 col-sm-12">
+            <label for="SubType">{{ 'subscription_type' | translate}}</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder=" {{ 'placeholder_text' | translate}} "
+              name="TicketTitle"
+              ngModelF
+              disabled
+            />
+          </div>
+          <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="SubPrice">{{ 'subscription_price' | translate}}</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=" {{ 'placeholder_text' | translate}} "
+                name="SubPrice"
+                ngModelF
+                disabled
+              />
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="renewalDate">{{ 'expected_renewel_date' | translate}}</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=" {{ 'placeholder_text' | translate}} "
+                  name="renewalDate"
+                  ngModelF
+                  disabled
+                />
+              </div>
+        </form>
+        <div class="reminder-btn">
+            <button data-toggle="modal"  (click)="open()"><img src="../../../../../assets/images/reminders.svg" class="" alt="">{{ 'expiry_reminder' | translate}}</button>
+        </div>
+        <div class="back-toHome">
+            <a href="" routerLink="../"><i class="fas fa-angle-left"></i> {{ 'back_page' | translate}}</a>
+      </div>
+        </div>
+        
+        <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{'modal_title'|translate }}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">{{'close'|translate }}</button>
+          <button type="button" class="btn btn-primary">{{'save_changes'|translate}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>

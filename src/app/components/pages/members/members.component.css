@@ -1,0 +1,48 @@
+/**/
+
+.custom-form-group .form-control{
+    height: 48px;
+    border-radius: 100px;
+    border-color: #ebebeb;
+    box-shadow: 1px 1px 4px 0px #d3d3d35e;
+    position: relative;
+    padding-left: 30px;
+}
+
+.special_icon{
+    background-color: #F5F5F5;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    right: 40px;
+    top: 10px;
+    height: 47px;
+    border-radius: 100px;
+    right: 16px;
+    width: 70px;
+    text-align: center;;
+}
+.special_icon img{
+    width: 25px;
+    top: 12px;
+    position: relative;
+}
+.theme-table thead{
+    background-color: var(--theme-blue);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+     /* text-align: center; */
+}
+.theme-table th{
+    padding: 3px 10px !important
+}
+.theme-table td{
+    padding: 3px 10px !important;
+    font-size: 14px;
+}
+.theme-table td a{
+    color: var(--theme-light-blue);
+    font-weight: 600;
+}

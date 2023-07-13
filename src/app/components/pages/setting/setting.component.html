@@ -1,0 +1,49 @@
+<div class="container-fluid padding-left-right-32">
+  <div class="row custom-form-group">
+    <div class="col-lg-12">
+      <h1 class="content-heading">{{ 'setting' | translate}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="../setting" aclass="active"
+      innertext="{{ 'language_setting' | translate}}"> </app-setting-cards>
+    <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="accountSetting" aclass=""
+      innertext="{{ 'account_setting' | translate}}"></app-setting-cards>
+    <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="currencySetting" aclass=""
+      innertext="{{ 'currency_setting' | translate}}"></app-setting-cards>
+    <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="subSetting" aclass=""
+      innertext="{{ 'subscription_setting' | translate}} "></app-setting-cards>
+  </div>
+
+  <div class="white-bg">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="white-bg-subHeading">{{ 'language_setting' | translate}}</div>
+      </div>
+      <div class="col-lg-4">
+
+      </div>
+    </div>
+    <div class="row my-4 mx-1 create-form">
+      <div class="form-group col-lg-6">
+        <label for="LanguageSetting">{{ 'language' | translate}}</label>
+        <select name="" class="form-control" id="">
+          <option value="" selected disabled> {{ 'please_select' | translate}}</option>
+          <option value="">English</option>
+          <option value="">Arabic</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-lg-12 text-right">
+      <app-cancel-btn></app-cancel-btn>
+      <app-reset-btn></app-reset-btn>
+      <app-update-btn></app-update-btn>
+
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

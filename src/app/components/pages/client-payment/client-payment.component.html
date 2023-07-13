@@ -1,0 +1,83 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'client_payment' | translate}}</h1>
+      </div>
+    </div>
+
+    <div class="row custom-form-group">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{ 'search' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/search.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_country' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_city' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder=" {{'filter_by_subscription_date' | translate}} ">
+                <span class="special_icon"><img src="./../../../../assets/images/3586371_calendar_date_schedule_icon.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_priority' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="white-bg">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="white-bg-subHeading">{{ 'bill_analysis_dashboard' | translate}}</div>
+              </div>    
+        </div>
+        <div class="row">
+            <app-client-dashboard-card class="col-lg-4 col-md-6 col-sm-12" text="{{ 'summary_of_total_bills_income' | translate}}" figure="525,775"></app-client-dashboard-card>
+            <app-client-dashboard-card class="col-lg-4 col-md-6 col-sm-12" text="{{ 'credit_card_payment_bills_income' | translate}}" figure="654,124"></app-client-dashboard-card>
+            <app-client-dashboard-card class="col-lg-4 col-md-6 col-sm-12" text="{{ 'bank_transfer_total_bills_income' | translate}}" figure="254,412"></app-client-dashboard-card>
+            <app-client-dashboard-card class="col-lg-4 col-md-6 col-sm-12" text="{{ 'total_pos_bills_income' | translate}}" figure="157,546"></app-client-dashboard-card>
+            <app-client-dashboard-card class="col-lg-4 col-md-6 col-sm-12" text="{{ 'total_cash_bills_income' | translate}}" figure="524,665"></app-client-dashboard-card>
+            <app-client-dashboard-card class="col-lg-4 col-md-6 col-sm-12" text="{{ 'total_unpaid_bills' | translate}}" figure="693,541"></app-client-dashboard-card>
+        
+        </div>
+    </div>
+    <div class="white-bg">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="white-bg-subHeading">{{'client_wallet' | translate}}</div>
+          </div>
+        </div>
+        <div class="row my-4 mx-1">
+            <table class="table theme-table table-bordered" *ngIf="PaymentList">
+                <thead>
+                    <tr>
+                        <th>{{ 'client_name' | translate}}</th>
+                        <th>{{ 'client_income' | translate}}</th>
+                        <th>{{ 'client_credit_card' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let payment of PaymentList">
+                    <tr>
+                        <td><a href="" routerLink="clientWallet">{{payment.ClientName}}</a></td>
+                        <td>{{payment.ClientIncome}}</td>
+                        <td>{{payment.ClientCC}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <app-footer></app-footer>

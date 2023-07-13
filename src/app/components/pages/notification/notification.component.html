@@ -1,0 +1,82 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'notification' | translate}}</h1>
+      </div>
+    </div>
+
+    <div class="row custom-form-group">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{ 'search' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/search.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_country' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_city' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder=" {{'filter_by_subscription_date' | translate}} ">
+                <span class="special_icon"><img src="./../../../../assets/images/3586371_calendar_date_schedule_icon.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_period' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="white-bg">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="white-bg-subHeading">{{ 'notification_list' | translate}}</div>
+          </div>
+          <div class="col-lg-4 text-right">
+            <a href="" routerLink="addNewNotification" class="theme-active-btn top-btn mt-0">{{'new_notification' | translate}} </a>
+          </div>
+        </div>
+        <div class="row my-4 mx-1">
+            <table class="table theme-table table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ 'client_name' | translate}} </th>
+                        <th>{{ 'subscription_type' | translate}}   </th>
+                        <th>{{ 'th_country_name' | translate}}  </th>
+                        <th>{{ 'th_city_name' | translate}}  </th>
+                        <th>{{ 'period' | translate}} </th>
+                        <th>{{ 'expire_year' | translate}} </th>
+                        <th>{{ 'expire_month' | translate}} </th>
+                        <th>{{ 'expire_date' | translate}} </th>
+                        <th>{{ 'notification' | translate}}  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let noti of notification">
+                        <td><span class="theme-color">{{noti.company.companyName}}</span></td>
+                       <td>{{noti.subscriptionType}}</td>
+                       <td>{{noti.country.name}}</td>
+                       <td>{{noti.city.name}}</td>
+                       <td>{{noti.subscriptionPeriod}}</td>
+                       <td>{{noti.subscriptionExpiringDate | date:'yyyy'}}</td>
+                       <td>{{noti.subscriptionExpiringDate | date:'MM'}}</td>
+                       <td>{{noti.subscriptionExpiringDate | date:'dd'}}</td>
+                       <td><span (click)="open()"  class="theme-active-btn">{{'send'|translate}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <app-footer></app-footer>

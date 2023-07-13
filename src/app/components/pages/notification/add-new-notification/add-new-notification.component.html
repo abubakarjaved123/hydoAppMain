@@ -1,0 +1,131 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{'add_new_notification'|translate}}</h1>
+      </div>
+    </div>
+    <div class="white-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="white-bg-subHeading">{{'information'|translate}}</div>
+        </div>
+      </div>
+      <form  #subForm="ngForm" (ngSubmit)="getValues(subForm.value)" class="row create-form">
+        <!-- <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="clientName">{{ 'client_name'}}</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder=" {{ 'placeholder_text' | translate}}"
+            name="clientName"
+            ngModelF
+          />
+        </div> -->
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="companyName">{{'company_name'|translate}}</label>
+          <select  id="" class="form-control" [(ngModel)]="selectedCompany">
+            <option value="" selected disabled>{{'please_select-company'|translate}}</option>
+            <option *ngFor="let companies of companyDetail" value="{{companies._id}}"> {{companies.companyName}}</option>    
+          </select>
+        </div>
+        <div>
+          {{selectedCompany}}
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="SubType"
+            >{{ 'subscription_type' | translate}}</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            placeholder=" {{ 'placeholder_text' | translate}}"
+            name="SubType"
+            ndModel
+          />
+        </div>
+        <!-- <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="Country ">{{ 'th_country_name' | translate}} </label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder=" {{ 'placeholder_text' | translate}}"
+            name="Country "
+            ngModel
+          />
+        </div> -->
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="CompanyCountry">{{ 'company_country_select' | translate}}</label>
+          <select  id="" class="form-control" >
+            <option value="" selected disabled>{{'please_select-country'|translate}}</option>
+            <option *ngFor="let country of CountryResponce" value="{{country._id}}"> {{country.name}}</option>    
+          </select>
+        </div>
+
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="CompanyCity">{{ 'company_city_select' | translate}}</label>
+          <select id="" class="form-control">
+            <option value="" selected disabled>{{ 'please_select' | translate}}</option>
+            <!-- <option value="1">{{'company_city_value' | translate}}</option>
+            <option value="2">Riyadh</option>
+            <option value="3">Abu Dhabi</option>
+            <option value="4">Sharjah</option> -->
+            <option *ngFor="let city of CityResponce " value="{{city._id}}"> {{city.name}}</option>    
+          </select>
+        </div>
+          <div class="form-group col-lg-6 col-md-6 col-sm-12">
+            <label for="SubPeriod">{{ 'th_subscription_period' | translate}} </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder=" {{ 'placeholder_text' | translate}}"
+              name="SubPeriod "
+              ngModel
+            />
+          </div>
+          <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="Subscriptionexpiringmonth">{{ 'subscription_expire_month' | translate}} </label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder=" {{ 'placeholder_text' | translate}}"
+                name="Subscriptionexpiringmonth"
+                ngModel
+              />
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="Subscriptionexpiringyear">{{ 'subscription_expire_year' | translate}} </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=" {{ 'placeholder_text' | translate}}"
+                  name="Subscriptionexpiringyear"
+                  ngModel
+                />
+            </div>
+            <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                <label for="Subscriptionexpiringdate">{{ 'subscription_expire_date' | translate}} </label>
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder=" {{ 'placeholder_text' | translate}}"
+                  name="Subscriptionexpiringdate"
+                  ngModel
+                />
+            </div>
+            <div class="form-group col-lg-12 col-md-12">
+                <label for="NotificationDetail">{{ 'notification_detail' | translate}}</label>
+                <textarea class="form-control" name="" id="" cols="30" rows="5"></textarea>
+            </div>
+       <div class="col-lg-12 text-right mt-4">
+           <!-- <app-update-btn></app-update-btn> -->
+           <app-save-btn></app-save-btn>
+           <app-cancel-btn></app-cancel-btn>
+       </div>
+      </form>
+
+      <div class="back-toHome">
+        <a href="" routerLink="../"><i class="fas fa-angle-left"></i> {{ 'back_page' | translate}}</a>
+  </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

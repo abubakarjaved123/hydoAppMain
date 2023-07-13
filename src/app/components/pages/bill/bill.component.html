@@ -1,0 +1,75 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="content-heading">{{ 'subscription_bill' | translate}}</h1>
+        </div>
+    </div>
+
+    <div class="row custom-form-group">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{ 'search' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/search.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_country' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_city' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder=" {{'filter_by_subscription_date' | translate}} ">
+                <span class="special_icon"><img
+                        src="./../../../../assets/images/3586371_calendar_date_schedule_icon.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_priority' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="white-bg">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="white-bg-subHeading">{{ 'subscription_bill_listing' | translate}}</div>
+            </div>
+        </div>
+        <div class="row my-4 mx-1">
+            <table class="table theme-table table-bordered" *ngIf="BillList">
+                <thead>
+                    <tr>
+                        <th>{{ 'company_name' | translate}}</th>
+                        <th>{{ 'expiry_date' | translate}}</th>
+                        <th>{{ 'subscription_type' | translate}}</th>
+                        <th>{{ 'subscription_price' | translate}}</th>
+                        <th>{{ 'expected_renewel_date' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor='let bill of BillList'>
+                        <tr>
+                            <td><a routerLink="subscriptionbillnoti">{{bill.company.length === 0 ? '' :
+                                    bill.company[0].companyName}}</a></td>
+                            <td>{{bill.subscriptionExpireDate | date:'yyyy-MM-dd'}}</td>
+                            <td>{{bill.subscriptionType}}</td>
+                            <td>{{bill.subscriptionAmount}} {{'currency_riyal' | translate }}</td>
+                            <td>{{bill.expectedRenewalDate | date:'yyyy-MM-dd'}}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

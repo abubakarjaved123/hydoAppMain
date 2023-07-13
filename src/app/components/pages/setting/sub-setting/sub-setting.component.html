@@ -1,0 +1,70 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row custom-form-group">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'setting' | translate}}</h1>
+      </div>
+    </div>
+	<div class="row">
+		<app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting" aclass="" innertext="{{ 'language_setting' | translate}}"> </app-setting-cards>
+        <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting/accountSetting" aclass="" innertext="{{ 'account_setting' | translate}} "></app-setting-cards>
+        <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting/currencySetting" aclass="" innertext="{{ 'currency_setting' | translate}}"></app-setting-cards>
+        <app-setting-cards class="col-lg-4 col-md-4 col-sm-6" alink="/setting/subSetting" aclass="active" innertext="{{ 'subscription_setting' | translate}}"></app-setting-cards>
+    </div>
+
+    <div class="white-bg mb-5">
+        <div class="row my-4 mx-1 mb-5 create-form">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <ul class="sub-ul">
+                    <li class="heading">{{ 'basic' | translate}}</li>
+                    <li class="price">3,522 {{'riyals' | translate}} <br> <small>{{ 'price' | translate}}</small></li>
+                    <li class="installationManager"><h3>2</h3> <p class="small">{{ 'installation_manager' | translate}}</p></li>
+                    <li class="BillManager"><h3>2</h3> <p class="small">{{ 'bill_manager' | translate}}</p></li>
+                    <li class="MantenanceManager"><h3>2</h3> <p class="small">{{ 'maintenance_manager' | translate}}</p></li>
+                    <li class="MaintenanceTechnicians"><h3>2</h3> <p class="small">{{ 'maintenance_technicians' | translate}}</p></li>
+                    <li class="supervisor"><h3>2</h3> <p class="small">{{ 'supervisor' | translate }}</p></li>
+                    <a href="" routerLink="../subSettingEdit" class="subEdit"> <img src="../../../../../assets/images/edit2.svg" alt=""></a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <ul class="sub-ul">
+                    <li class="heading">{{ 'standard' | translate}}</li>
+                    <li class="price">12,522 {{'riyals' | translate}} <br> <small>{{ 'price' | translate}}</small></li>
+                    <li class="installationManager"><h3>2</h3> <p class="small">{{ 'installation_manager' | translate}}</p></li>
+                    <li class="BillManager"><h3>2</h3> <p class="small">{{ 'bill_manager' | translate}}</p></li>
+                    <li class="MantenanceManager"><h3>2</h3> <p class="small">{{ 'maintenance_manager' | translate}}</p></li>
+                    <li class="MaintenanceTechnicians"><h3>2</h3> <p class="small">{{ 'maintenance_technicians' | translate}}</p></li>
+                    <li class="supervisor"><h3>2</h3> <p class="small">{{ 'supervisor' | translate }}</p></li>
+                    <a href="" routerLink="../subSettingEdit" class="subEdit"> <img src="../../../../../assets/images/edit2.svg" alt=""></a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <ul class="sub-ul">
+                    <li class="heading">{{ 'pro' | translate}}</li>
+                    <li class="price">50,522 {{'riyals' | translate}} <br> <small>{{ 'price' | translate}}</small></li>
+                    <li class="installationManager"><h3>2</h3> <p class="small">{{ 'installation_manager' | translate}}</p></li>
+                    <li class="BillManager"><h3>2</h3> <p class="small">{{ 'bill_manager' | translate}}</p></li>
+                    <li class="MantenanceManager"><h3>2</h3> <p class="small">{{ 'maintenance_manager' | translate}}</p></li>
+                    <li class="MaintenanceTechnicians"><h3>2</h3> <p class="small">{{ 'maintenance_technicians' | translate}}</p></li>
+                    <li class="supervisor"><h3>2</h3> <p class="small">{{ 'supervisor' | translate }}</p></li>
+                    <a href="" routerLink="../subSettingEdit" class="subEdit"> <img src="../../../../../assets/images/edit2.svg" alt=""></a>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <ul class="sub-ul">
+                    <li class="heading">{{ 'gold' | translate}}</li>
+                    <li class="price">75,522 {{'currency_riyals' | translate}} <br> <small>{{ 'price' | translate}}</small></li>
+                    <li class="installationManager"><h3>2</h3> <p class="small">{{ 'installation_manager' | translate}}</p></li>
+                    <li class="BillManager"><h3>2</h3> <p class="small">{{ 'bill_manager' | translate}}</p></li>
+                    <li class="MantenanceManager"><h3>2</h3> <p class="small">{{ 'maintenance_manager' | translate}}</p></li>
+                    <li class="MaintenanceTechnicians"><h3>2</h3> <p class="small">{{ 'maintenance_technicians' | translate}}</p></li>
+                    <li class="supervisor"><h3>2</h3> <p class="small">{{ 'supervisor' | translate }}</p></li>
+                    <a href="" routerLink="../subSettingEdit" class="subEdit"> <img src="../../../../../assets/images/edit2.svg" alt=""></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
+
+	<app-footer></app-footer>

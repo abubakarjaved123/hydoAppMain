@@ -1,0 +1,87 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="content-heading">{{ 'user_management' | translate}}</h1>
+        </div>
+        <!-- <div class="col-lg-6 text-right">
+          <a href="" routerLink="addNewUser" class="theme-active-btn top-btn mt-0"> {{ 'add_new_client' | translate}}</a>
+      </div> -->
+    </div>
+
+    <div class="row custom-form-group">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{ 'search' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/search.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_country' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_city' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder=" {{'filter_by_subscription_date' | translate}} ">
+                <span class="special_icon"><img
+                        src="./../../../../assets/images/3586371_calendar_date_schedule_icon.svg" alt=""></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="{{'filter_by_priority' | translate}}">
+                <span class="special_icon"><img src="./../../../../assets/images/filter.svg" alt=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="white-bg">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="white-bg-subHeading">{{ 'user_listing' | translate}}</div>
+            </div>
+            <div class="col-lg-4 text-right">
+
+                <a href="" routerLink="addNewUser" class="theme-active-btn top-btn mt-0"> {{ 'add_new_client' |
+                    translate}}</a>
+
+            </div>
+        </div>
+        <div class="row my-4 mx-1">
+            <table class="table theme-table table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ 'name' | translate}}</th>
+                        <th>{{ 'email' | translate }}</th>
+                        <th>{{ 'contact_no' | translate}}</th>
+                        <th>{{ 'username' | translate}}</th>
+                        <th>{{ 'role' | translate}}</th>
+                        <th>{{ "status" | translate}}</th>
+                        <th>{{ "th_actions" | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let user of  Userlist ">
+                   
+                    <tr>
+                        <td><a href="" routerLink="editUser/{{user._id}}">{{user.name}}</a></td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.contact}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.roles == null ? '' : user.roles.name}}</td>
+                        <!-- <td>{{user.roles === null ? 'steps' : 'km'}} </td> -->
+                        <td><span class="theme-active-btn"><!-- {{ 'active' | translate}} --> {{user.status}}</span></td>
+                        <td><a class="text-danger" (click)="confirmDelete($event)"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

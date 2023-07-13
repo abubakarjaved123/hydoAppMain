@@ -1,0 +1,21 @@
+.update-btn{
+    background-color: var(--theme-blue);
+    color: #fff;
+    border-radius: 100px;
+    padding: 5px 20px;
+    border: none;
+    margin: 0 5px;
+    min-width: 115px;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+.update-btn:hover{
+    background-color: #fff;
+    border-color: var(--theme-blue);
+    color: var(--theme-blue);
+}
+.update-btn span.text{
+    margin-left: 4px;
+}

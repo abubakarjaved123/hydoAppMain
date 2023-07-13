@@ -1,0 +1,48 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row custom-form-group">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'reports' | translate}}</h1>
+      </div>
+    </div>
+	<div class="row">
+		<app-report-card class="col-lg-4 col-md-4 col-sm-6" alink="../" aclass="" innerfigure="{{ 'number_of_client_subscribed' | translate}}" innertext="253"> </app-report-card>
+		<app-report-card class="col-lg-4 col-md-4 col-sm-6" alink="../ticketReport" aclass="" innertext="312" innerfigure="{{ 'number_of_new_tickets' | translate}} "> </app-report-card>
+		<app-report-card class="col-lg-4 col-md-4 col-sm-6" alink="../paidBill" aclass="active" innertext="964" innerfigure="{{ 'number_of_new_paid_bill_request' | translate}} "> </app-report-card>
+		<app-report-card class="col-lg-4 col-md-4 col-sm-6" alink="../unpaidSub" aclass="" innertext="788" innerfigure="{{ 'number_of_unpaid_subscription' | translate}} "> </app-report-card>
+		<app-report-card class="col-lg-4 col-md-4 col-sm-6" alink="../creditCardTransfer" aclass="" innertext="586" innerfigure="{{ 'number_of_credit_card_income_transfer_request' | translate}} "> </app-report-card>
+	</div>
+
+    <div class="white-bg">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="white-bg-subHeading">{{ 'bill_paid_report' | translate}}</div>
+          </div>
+          <div class="col-lg-4">
+    
+          </div>
+        </div>
+        <div class="row my-4 mx-1">
+            <table class="table theme-table table-bordered">
+                <thead>
+                    <tr>
+                        <th>{{ 'company_name' | translate}}</th>
+                        <th>{{ 'bill_amount' | translate}} </th>
+                        <th>{{ 'bill_name' | translate}} </th>
+                        <th>{{ 'status' | translate}}</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let paidbill of bill.paidBill">
+                    <tr>
+                       <td><span class="theme-color">{{paidbill.companyName}}</span></td>
+                       <td>{{paidbill.billAmount}}</td>
+                       <td>{{paidbill.billNumber}}</td>
+                       <td><span class="theme-active-btn">{{paidbill.status === 1 ? ('paid'|translate): ('unpaid'|translate)}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+	<app-footer></app-footer>

@@ -1,0 +1,90 @@
+<div class="container-fluid padding-left-right-32">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="content-heading">{{ 'setting' | translate}}</h1>
+      </div>
+    </div>
+    <div class="white-bg">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="white-bg-subHeading">{{ 'basic_subscription' | translate}}</div>
+        </div>
+      </div>
+      <form  #subForm="ngForm" class="row create-form">
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="clientName">{{ 'number_of_installation_manager' | translate}}</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="2"
+            name="clientName"
+            ngModelF
+          />
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="SubType"
+            >{{ 'number_of_bill_managers' | translate}}</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            placeholder="2"
+            name="SubType"
+            ndModel
+          />
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+          <label for="Country ">{{ 'number_of_installation_manager' | translate}}</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="3"
+            name="Country "
+            ngModel
+          />
+        </div>
+        <div class="form-group col-lg-6 col-md-6 col-sm-12">
+            <label for="City">{{'number_of_maintenance_technicians' | translate}}</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="7"
+              name="City "
+              ngModel
+            />
+          </div>
+          <div class="form-group col-lg-6 col-md-6 col-sm-12">
+            <label for="SubPeriod">{{ 'number_of_supervisor' | translate}} </label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="4"
+              name="SubPeriod "
+              ngModel
+            />
+          </div>
+          <div class="form-group col-lg-6 col-md-6 col-sm-12">
+              <label for="Subscriptionexpiringmonth">{{ 'price' | translate}}</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="12,000 {{ 'riyals' | translate}}"
+                name="Subscriptionexpiringmonth"
+                ngModel
+              />
+            </div>
+            
+       <div class="col-lg-12 text-right mt-4">
+           <!-- <app-update-btn></app-update-btn> -->
+           <app-cancel-btn></app-cancel-btn>
+           <app-reset-btn></app-reset-btn>
+           <app-update-btn></app-update-btn>
+       </div>
+      </form>
+
+      <div class="back-toHome">
+        <a href="" routerLink="../"><i class="fas fa-angle-left"></i> {{'back_page' | translate}}</a>
+  </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

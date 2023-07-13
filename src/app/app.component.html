@@ -1,0 +1,20 @@
+<div dir="{{'side' | translate}}" class="main-wrapper" [ngClass]="status ? 'success' : 'danger'">
+    <!-- <div class="main-wrapper" [ngClass]="status ? 'success' : 'danger'"> -->
+    <app-sidebar></app-sidebar>
+    <div class="content">
+        <!-- <app-topbar (click)="clickEvent()"></app-topbar> -->
+        <div class="topbar">
+            <div class="topbar-left-icon" (click)="clickEvent()">
+                <span class="icon"><i class="fas fa-chevron-left"></i></span>
+            </div>
+            <div class="topbar-right-icon ">
+                <select (change)="selectLanguage($event)" name="" id="" class="select__language">
+                    <option value="en-US">English</option>
+                    <option value="ar-SA">Arabic</option>
+                </select>
+                <app-topbar-drop-down></app-topbar-drop-down>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
